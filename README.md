@@ -55,7 +55,7 @@ Customized
   flipVertical={false}
   flip={false}
   clickable={true}
-  onFlipped={(isFlipped)=>{console.log('isFlipped', isFlipped)}}
+  onFlipEnd={(isFlipEnd)=>{console.log('isFlipEnd', isFlipEnd)}}
 >
   {/* Face Side */}
   <View style={styles.face}>
@@ -75,7 +75,7 @@ flip(bool) `Default: false`
 ---
 If you change default display side, you can set `true` to this param. If you change side, you can pass `bool` variable dynamically.
 
-clicakble(bool) `Default: true`
+clickable(bool) `Default: true`
 ---
 If you want to disable click a card, you can set `false` to this param.
 
@@ -104,9 +104,9 @@ vertical | diagnoal
  ![](./doc/ver2_vertical.gif)| ![](./doc/ver2_diagonal.gif)
 
 
-onFlipped(function) `(is_flipped) => {}`
+onFlipEnd(function) `(isFlipEnd) => {}`
 ---
-When a card finish a flip animation, call `onFlipped` function with param.
+When a card finish a flip animation, call `onFlipEnd` function with param.
 
 alignHeight(boolean) `Default:false`
 ---
